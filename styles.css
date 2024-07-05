@@ -1,93 +1,176 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
+* {
+  font-family: "Jost", sans-serif !important;
+}
+
 body,
 html {
-    margin: 0;
-    padding: 0;
-    font-family: "Jost", sans-serif;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .logo {
-    height: 150px;
+  height: 150px;
 }
 
 a {
-    color: black;
+  color: black;
 }
 
-h1, h3 {
-    margin: 0;
+h1,
+h3 {
+  margin: 0;
 }
 
 h3 {
-    font-size: 2rem;
-    font-weight: 400;
-    text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 main {
-    min-height: 100vh;
-    background-color: #35fa0a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  min-height: 100vh;
+  background-color: #35fa0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .logo-container {
-    display: flex;
-    align-items:center;
+  display: flex;
+  align-items: center;
 }
 
 .logo-container .logo {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .logo-container h1 {
-    font-size: 10rem;
-    font-weight: 600;
+  font-size: 10rem;
+  font-weight: 600;
 }
 
 .contact-info {
-    display: flex;
-    gap: 6rem;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  width: 100%;
 }
 
-.location, .contact {
-    text-align: left;
+.location,
+.contact {
+  text-align: center;
+}
+
+.do_not_show {
+  display: none;
+}
+
+input.email {
+  border-radius: 0;
+  border: black 2px solid;
+  background-color: #35fa0a;
+  min-height: 30px;
+}
+
+input.subscribe {
+  margin: 10px 0;
+  border-radius: 0;
+  border: none;
+  color: #35fa0a;
+  background-color: black;
+  min-height: 35px;
+}
+
+input {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#mc_embed_shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#mc_embed_signup {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+#mc_embed_signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mc-embedded-subscribe {
+  width: 120px;
+  cursor: pointer;
+}
+
+.mc-field-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mc-field-group input {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+    text-align: center;
+}
+
+::placeholder {
+  color: black;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
+    .logo-container h1 {
+      font-size: 5rem;
+    }
+    .logo {
+      height: 80px;
+    }
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
 
-        .logo-container h1 {
-                font-size: 5rem;
-        }
-
-        .logo {
-                height: 80px;
-        }
-
-        .content-wrapper {
-                width: 100%;
-        }
-
-        .contact-info {
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-        }
-
-        .location, .contact {
-                text-align: center;
-        }
-}
+    }
+    #mc_embed_shell,
+    .location,
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .location {
+      margin: 1rem 0;
+    }
+  }
